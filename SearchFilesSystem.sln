@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileSystemInfo", "FileHandlers\FileSystemInfo.csproj", "{7297C786-3560-42D4-9AEC-4B77A4DD930A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileBrowserApi", "FileBrowserApi\FileBrowserApi.csproj", "{BC20DF73-404C-4455-A492-AAACD8BDEC96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileBrowserView (Angular)", "FileBrowserView\FileBrowserView (Angular).csproj", "{B00D3E28-ADDB-487E-A80D-5211258BDBD3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7297C786-3560-42D4-9AEC-4B77A4DD930A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7297C786-3560-42D4-9AEC-4B77A4DD930A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7297C786-3560-42D4-9AEC-4B77A4DD930A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7297C786-3560-42D4-9AEC-4B77A4DD930A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC20DF73-404C-4455-A492-AAACD8BDEC96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC20DF73-404C-4455-A492-AAACD8BDEC96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC20DF73-404C-4455-A492-AAACD8BDEC96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC20DF73-404C-4455-A492-AAACD8BDEC96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B00D3E28-ADDB-487E-A80D-5211258BDBD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B00D3E28-ADDB-487E-A80D-5211258BDBD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B00D3E28-ADDB-487E-A80D-5211258BDBD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B00D3E28-ADDB-487E-A80D-5211258BDBD3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,26 @@
+﻿<h4>Current path: {{currentPath | lowercase}}</h4>
+<a href="" ng-click="getData(oldPath)">{{backPointer}}</a>
+<div class="row">
+    <div class="col-md-4 col-lg-4">
+        <h4 class="bg-info">Directories:</h4>
+        <h1 ng-show="loading">Loading...</h1>
+        <div class="list-group">
+            <a href="" class="list-group-item"
+               ng-repeat="directory in dirData"
+               ng-click="getData(directory)">
+                {{directory | deletePath : currentPath}}
+            </a>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4 col-lg-4">
+        <h4 class="bg-info">Files:</h4>
+        <div class="list-group">
+            <a href="" class="list-group-item"
+               ng-repeat="file in fileData">
+                {{file | deletePath : currentPath}}
+            </a>
+        </div>
+    </div>
+</div>
