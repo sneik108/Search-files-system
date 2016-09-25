@@ -24,21 +24,33 @@ namespace FileHandlers
             dataInfo.directoryNames = SafeFileEnumerator.EnumerateDirectories(path, patternForDirectories, SearchOption.TopDirectoryOnly);
             dataInfo.fileNames = SafeFileEnumerator.EnumerateFiles(path, patternForFiles, SearchOption.TopDirectoryOnly);
             IEnumerable<string> fileNames = SafeFileEnumerator.EnumerateFiles(path, patternForFiles, SearchOption.AllDirectories);
-            
+
             //calculating the numbers of files in groups
+            CalculateNumberOfFiles(fileNames, dataInfo);
+            return dataInfo;
+        }
+        private static void CalculateNumberOfFiles(IEnumerable<string> fileNames, FilesData dataInfo)
+        {
             FileInfo info = null;
             if (fileNames != null)
             {
                 foreach (string name in fileNames)
                 {
-                    info = new FileInfo(name);
-                    var sizeOfFile = info.Length / bytesInMB;
-                    if (sizeOfFile <= 10) dataInfo.numberOfSmallGroup++;
-                    else if (sizeOfFile > 10 && sizeOfFile <= 50) dataInfo.numberOfMiddleGroup++;
-                    else dataInfo.numberOfLargeGroup++;
+                    try
+                    {
+                        info = new FileInfo(name);
+                        var sizeOfFile = info.Length / bytesInMB;
+                        if (sizeOfFile <= 10) dataInfo.numberOfSmallGroup++;
+                        else if (sizeOfFile > 10 && sizeOfFile <= 50) dataInfo.numberOfMiddleGroup++;
+                        else dataInfo.numberOfLargeGroup++;
+                    }
+                    catch (Exception ex)
+                    {
+                        dataInfo.errors = new List<FileErrorInfo>();
+                        dataInfo.errors.Add(new FileErrorInfo(name, ex.Message));
+                    }
                 }
             }
-            return dataInfo;
         }
         public static string[] GetFixedDrives()
         {

@@ -84,7 +84,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
-    <Content Include="filters.js" />
+    <Content Include="Scripts\CustomScripts\filters.js" />
     <Content Include="packages.config" />
     <Content Include="Scripts\jquery-1.9.1.min.map" />
     <None Include="Web.Debug.config">
@@ -95,8 +95,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app.js" />
-    <Content Include="controller.js" />
+    <Content Include="Scripts\CustomScripts\app.js" />
+    <Content Include="Scripts\CustomScripts\controller.js" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="index.html" />
@@ -115,6 +115,7 @@
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="Scripts\jquery-2.1.1.min.js" />
+    <Content Include="Views\errors.html" />
     <Content Include="Views\fileInfo.html" />
     <Content Include="Views\table.html" />
     <Content Include="Web.config" />

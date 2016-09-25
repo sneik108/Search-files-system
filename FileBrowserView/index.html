@@ -7,10 +7,9 @@
     <link href="Content/bootstrap.css" rel="stylesheet" />
     <meta charset="utf-8" />
 
-    <script src="app.js"></script>
-    <script src="filters.js"></script>
-
-    <script src="controller.js"></script>
+    <script src="Scripts/CustomScripts/app.js"></script>
+    <script src="Scripts/CustomScripts/filters.js"></script>
+    <script src="Scripts/CustomScripts/controller.js"></script>
 </head>
 <body ng-controller="FileBrowserCtrl">
     <div class="panel panel-primary">
@@ -18,6 +17,8 @@
         <div class="panel-body">
             <span ng-include="tableUrl"></span>
             <span ng-include="fileInfoUrl"></span>
+            <span ng-include="errorsUrl"></span>
+           
         </div>
     </div>
 </body>

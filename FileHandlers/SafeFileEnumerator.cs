@@ -21,7 +21,7 @@ namespace FileHandlers
                 }
                 return directories.Concat(Directory.EnumerateDirectories(parentDirectory, searchPattern));
             }
-            catch (UnauthorizedAccessException ex)
+            catch (Exception ex) //handles errors "UnauthorizedAccessException" and "PathTooLongException"
             {
                 return Enumerable.Empty<string>();
             }
@@ -38,11 +38,7 @@ namespace FileHandlers
                 }
                 return dirFiles.Concat(Directory.EnumerateFiles(path, searchPattern));
             }
-            catch (UnauthorizedAccessException ex)
-            {
-                return Enumerable.Empty<string>();
-            }
-            catch(PathTooLongException ex)
+            catch (Exception ex)
             {
                 return Enumerable.Empty<string>();
             }
