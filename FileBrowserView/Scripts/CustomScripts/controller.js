@@ -29,6 +29,7 @@
                 $scope.fileData = response.fileNames; //This was done to decrease the markup code (in html)
                 $scope.dirData = response.directoryNames;
                 $scope.currentPath = path;
+                $scope.errors = response.errors;
                 $scope.oldPath = response.oldPath;
                 $scope.smallGroup = response.numberOfSmallGroup;
                 $scope.middleGroup = response.numberOfMiddleGroup;
